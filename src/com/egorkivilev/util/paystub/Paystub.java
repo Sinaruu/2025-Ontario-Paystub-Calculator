@@ -61,7 +61,6 @@ public class Paystub {
         System.out.println();
         System.out.println("> EI: $" + numberFormat.format(grossPay * (eiRate / 100)) + " (" + eiRate + "%)");
         System.out.println("> CPP: $" + numberFormat.format(grossPay * (cppRate / 100)) + " (" + cppRate + "%)");
-        System.out.println("[CPP Rate varies based on factors and may not be accurate]");
 
         System.out.println();
         System.out.println("> Net Pay: $" + numberFormat.format(netPay));

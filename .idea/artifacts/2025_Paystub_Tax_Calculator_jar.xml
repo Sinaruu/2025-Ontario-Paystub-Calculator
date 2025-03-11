@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="2025 Paystub Tax Calculator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/2025_Paystub_Tax_Calculator_jar</output-path>
+    <root id="archive" name="2025 Paystub Tax Calculator.jar">
+      <element id="module-output" name="2025 Paystub Tax Calculator" />
+    </root>
+  </artifact>
+</component>
