@@ -132,22 +132,24 @@ public class Util {
         int nlines = 0;
         try {
             File file = new File("UserSettings.csv");
-            Scanner input = new Scanner(file);
+            if(file.exists()) {
+                Scanner input = new Scanner(file);
 
-            while (input.hasNextLine()) {
-                line = input.nextLine();
-                //System.out.println(line);
-                fields = Util.parseLine(line);
-                //if (nlines==0) Util.getNCols(line);
-                if (nlines!=0) {
-                    values = fields;
+                while (input.hasNextLine()) {
+                    line = input.nextLine();
+                    //System.out.println(line);
+                    fields = Util.parseLine(line);
+                    //if (nlines==0) Util.getNCols(line);
+                    if (nlines!=0) {
+                        values = fields;
+                    }
+                    nlines++;
                 }
-                nlines++;
-            }
-            input.close();
+                input.close();
 
-            if(!values.isEmpty()) {
-                Util.changePayRate(Float.parseFloat(values.getFirst()));
+                if(!values.isEmpty()) {
+                    Util.changePayRate(Float.parseFloat(values.getFirst()));
+                }
             }
         } catch (Exception e) {
             System.err.println("Error: " + e.getMessage());
